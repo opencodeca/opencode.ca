@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    "mirego"
+  ],
+  "extends": [
+    "plugin:mirego/recommended",
+    "prettier",
+    "react-app"
+  ],
+  "env": {
+    "es6": true
+  },
+  "rules": {
+  }
+}

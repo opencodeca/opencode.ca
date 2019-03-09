@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "opencode",
+  "description": "The opencode.ca website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Rémi Prévost <remi@exomel.com>",
   "dependencies": {
     "gatsby": "^2.1.23",
     "gatsby-image": "^2.0.31",
@@ -16,15 +15,15 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "simple-css-reset": "^3.0.0"
   },
   "devDependencies": {
+    "eslint": "5.14.1",
+    "eslint-config-prettier": "4.0.0",
+    "eslint-plugin-mirego": "0.0.1",
     "prettier": "^1.16.4"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -32,12 +31,5 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

@@ -1,21 +1,58 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Logo from '../images/opencode.png';
+import Editions from '../components/editions';
 
-const IndexPage = () => (
+export default () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+    <SEO />
+    <main>
+      <section>
+        <a href="/" className="logo-wrapper">
+          <img src={Logo} width="166" alt="Logo de l’OpenCode" />
+        </a>
 
-export default IndexPage
+        <p>
+          L’OpenCode est une série de rencontres mensuelles tenues entre 2011 et
+          2016 dans la ville de Québec où des développeurs se rencontraient
+          autour de leur passion commune : le code.
+        </p>
+
+        <p>
+          Au total, 30 éditions officielles (en plus d’une édition <em>bêta</em>
+          ) ont eu lieu.
+        </p>
+
+        <p>
+          L’OpenCode n’existe plus. Mais pour la postérité, le contenu de ces
+          éditions est encore disponible sur ce site Web.
+        </p>
+
+        <p>
+          Merci!{' '}
+          <span role="img" aria-label="Signe de paix">
+            ✌️
+          </span>
+        </p>
+
+        <p className="team">
+          — L’équipe de l’OpenCode (
+          <a href="https://twitter.com/JimmyBourrassa">@JimmyBourrassa</a>,{' '}
+          <a href="https://twitter.com/frederickdubois">@frederickdubois</a>,{' '}
+          <a href="https://twitter.com/garno">@garno</a> et{' '}
+          <a href="https://twitter.com/remi">@remi</a>)
+        </p>
+      </section>
+
+      <Editions />
+
+      <section className="conclusion">
+        <a href="mailto:equipe@opencode.ca" role="img" aria-label="Bye!">
+          👋
+        </a>
+      </section>
+    </main>
+  </Layout>
+);
