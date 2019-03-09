@@ -11,7 +11,7 @@ export default () => (
     <main>
       <section>
         <a href="/" className="logo-wrapper">
-          <img src={Logo} width="166" alt="Logo de l’OpenCode" />
+          <img src={Logo} width="166" height="102" alt="Logo de l’OpenCode" />
         </a>
 
         <p>
