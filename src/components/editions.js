@@ -65,10 +65,12 @@ const Edition = ({title, dateTime, location, talks, tipsAndTricks, images}) => (
 
     <ul className="edition-content">
       {talks.map(talk => (
-        <Talk key={talk.id} {...talk} images={images} />
+        <Talk key={talk.title} {...talk} images={images} />
       ))}
 
-      {tipsAndTricks && <TipsAndTricksTalk images={images} />}
+      {tipsAndTricks && (
+        <TipsAndTricksTalk key="tips-and-tricks" images={images} />
+      )}
     </ul>
   </li>
 );
@@ -89,7 +91,7 @@ const Editions = () => {
               base
               childImageSharp {
                 fixed(width: 96, height: 96, quality: 100) {
-                  src
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
@@ -99,6 +101,7 @@ const Editions = () => {
         site {
           siteMetadata {
             editions {
+              id
               dateTime
               location
               tipsAndTricks
