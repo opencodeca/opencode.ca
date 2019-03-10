@@ -630,9 +630,9 @@ module.exports = {
             title: 'How I met a developer on the other side of the world',
             speaker: {
               id: 37,
-              name: 'Christian Joudrey',
-              screenName: 'cjoudrey',
-              avatar: 'cjoudrey.jpeg'
+              name: 'Edward Ocampo-Gooding & Christian Joudrey',
+              screenName: 'edwardog',
+              avatar: 'edwardog.jpeg'
             }
           }
         ]
