@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Intl from 'intl';
 
 import {Talk, TipsAndTricksTalk} from './Talk';
 
 const formatDateTime = dateTime => {
-  return new Intl.DateTimeFormat('fr-CA', {
+  return new (
+    (typeof window !== 'undefined' && window.Intl) ||
+    Intl
+  ).DateTimeFormat('fr', {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
