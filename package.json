@@ -4,8 +4,11 @@
   "version": "0.1.0",
   "author": "Rémi Prévost <remi@exomel.com>",
   "dependencies": {
+    "@emotion/core": "^10.0.7",
+    "@emotion/styled": "^10.0.7",
     "gatsby": "^2.1.23",
     "gatsby-image": "^2.0.31",
+    "gatsby-plugin-emotion": "^4.0.4",
     "gatsby-plugin-manifest": "^2.0.22",
     "gatsby-plugin-offline": "^2.0.24",
     "gatsby-plugin-react-helmet": "^3.0.8",
@@ -30,6 +33,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "heroku-postbuild": "gatsby build"
+    "heroku-postbuild": "gatsby build",
+    "lint-eslint": "eslint src",
+    "lint-prettier": "prettier -l src"
   }
 }

@@ -1,27 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {StaticQuery, graphql} from 'gatsby';
+import styled from '@emotion/styled';
 
 import 'simple-css-reset/reset.css';
-import './layout.css';
+import '../styles/global.css';
 
-const Layout = ({children}) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={_ => <>{children}</>}
-  />
-);
+const Wrapper = styled.div`
+  padding: 60px 30px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 550px;
+`;
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
-};
+const Layout = ({children}) => <Wrapper>{children}</Wrapper>;
 
 export default Layout;

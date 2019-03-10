@@ -1,9 +1,6 @@
 module.exports = {
   siteMetadata: {
     title: 'OpenCode (2011—2016)',
-    description:
-      'L’OpenCode était, entre 2011 et 2016, un évènement gratuit, sans prétention, amical et informel qui s’adressait aux développeurs et programmeurs de la ville de Québec.',
-    author: '@remi',
     editions: [
       {
         title: 'Édition bêta',
@@ -1369,6 +1366,7 @@ module.exports = {
       }
     },
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp'
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-emotion'
   ]
 };
