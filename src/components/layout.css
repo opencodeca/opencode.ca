@@ -133,6 +133,23 @@ p:last-child {
 }
 
 .edition-talk-avatar {
+  max-width: 48px;
+  min-width: 48px;
   margin: 0 15px 0 0;
   filter: grayscale(100%);
+}
+
+@media (max-width: 600px) {
+  .edition-title {
+    text-align: left;
+  }
+
+  .edition-title span {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .edition-content {
+    border-top: 0;
+  }
 }
