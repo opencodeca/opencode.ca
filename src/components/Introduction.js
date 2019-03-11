@@ -78,7 +78,7 @@ export default () => (
     <Team>
       <strong>L’équipe de l’OpenCode</strong>
       <span>
-        (<a href="https://twitter.com/JimmyBourrassa">@JimmyBourrassa</a>,{' '}
+        (<a href="https://twitter.com/JimmyBourassa">@JimmyBourassa</a>,{' '}
         <a href="https://twitter.com/frederickdubois">@frederickdubois</a>,{' '}
         <a href="https://twitter.com/garno">@garno</a> &amp;{' '}
         <a href="https://twitter.com/remi">@remi</a>)
