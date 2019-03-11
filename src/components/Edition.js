@@ -27,6 +27,26 @@ const formatDateTime = dateTime => {
     .replace(/^1(\s)/, '1<sup>er</sup>$1');
 };
 
+const formatSlug = string => {
+  const specialCharacters = 'àáäâãåăæçèéëêǵḧìíïîḿńǹñòóöôœṕŕßśșțùúüûǘẃẍÿź·/_,:;';
+  const normalizedCharacters =
+    'aaaaaaaaceeeeghiiiimnnnoooooprssstuuuuuwxyz------';
+  const regex = new RegExp(specialCharacters.split('').join('|'), 'g');
+
+  return string
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(regex, character =>
+      normalizedCharacters.charAt(specialCharacters.indexOf(character))
+    )
+    .replace(/&/g, '-and-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
+};
+
 const Item = styled.li`
   margin: 0 0 30px;
   padding: 0 0 30px;
@@ -90,7 +110,7 @@ export default ({
   tipsAndTricks,
   speakerImages
 }) => (
-  <Item>
+  <Item id={formatSlug(title)}>
     <Title className="edition-title">
       <span>
         <strong>{title}</strong>
