@@ -41,14 +41,7 @@ const AvatarPlaceholder = styled.div`
   min-width: 48px;
   height: 48px;
   margin: 0 15px 0 0;
-  opacity: 0.5;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  background: radial-gradient(black 15%, transparent 16%) 0 0,
-    radial-gradient(black 15%, transparent 16%) 8px 8px,
-    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
-  background-color: #282828;
-  background-size: 16px 16px;
+  background: rgba(0, 0, 0, 0.25);
 `;
 
 const Avatar = ({placeholder, speakerImages, speaker}) => {
