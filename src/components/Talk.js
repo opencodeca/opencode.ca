@@ -20,6 +20,11 @@ const Link = styled.a`
   color: #fff;
 `;
 
+const NonLink = styled.span`
+  font-weight: 500;
+  color: #fff;
+`;
+
 const Title = styled.span`
   display: block;
   font-weight: 300;
@@ -61,15 +66,20 @@ const Avatar = ({placeholder, speakerImages, speaker}) => {
   );
 };
 
+const Speaker = ({screenName, name}) =>
+  screenName ? (
+    <Link href={`https://twitter.com/${screenName}`}>{name}</Link>
+  ) : (
+    <NonLink>{name}</NonLink>
+  );
+
 export const Talk = ({title, speaker, speakerImages}) => (
   <Item>
     <Avatar speakerImages={speakerImages} speaker={speaker} />
 
     <div>
       <Name>
-        <Link href={`https://twitter.com/${speaker.screenName}`}>
-          {speaker.name}
-        </Link>
+        <Speaker {...speaker} />
       </Name>
 
       <Title dangerouslySetInnerHTML={{__html: title}} />
