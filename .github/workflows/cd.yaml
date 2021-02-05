@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: npm install
+      - run: npm config set ignore-scripts false && npm install
       - run: gatsby build
       - uses: peaceiris/actions-gh-pages@v3
         with:
