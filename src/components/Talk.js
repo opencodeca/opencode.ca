@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import styled from '@emotion/styled';
 
 const Item = styled.li`

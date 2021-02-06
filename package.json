@@ -30,9 +30,6 @@
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "heroku-postbuild": "gatsby build",
-    "lint-eslint": "eslint src",
-    "lint-prettier": "prettier -l src"
+    "serve": "gatsby serve"
   }
 }
