@@ -102,14 +102,7 @@ const Content = styled.ul`
   }
 `;
 
-export default ({
-  title,
-  dateTime,
-  location,
-  talks,
-  tipsAndTricks,
-  speakerImages
-}) => (
+export default ({title, dateTime, location, talks, tipsAndTricks}) => (
   <Item id={formatSlug(title)}>
     <Title className="edition-title">
       <span>
@@ -126,15 +119,10 @@ export default ({
 
     <Content>
       {talks.map(talk => (
-        <Talk key={talk.title} {...talk} speakerImages={speakerImages} />
+        <Talk key={talk.title} {...talk} />
       ))}
 
-      {tipsAndTricks && (
-        <TipsAndTricksTalk
-          key="tips-and-tricks"
-          speakerImages={speakerImages}
-        />
-      )}
+      {tipsAndTricks && <TipsAndTricksTalk key="tips-and-tricks" />}
     </Content>
   </Item>
 );

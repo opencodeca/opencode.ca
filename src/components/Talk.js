@@ -32,8 +32,8 @@ const Title = styled.span`
   line-height: 1.4;
 `;
 
-const AvatarImage = styled(Img)`
-  border-radius: 1px;
+const AvatarImage = styled.img`
+  border-radius: 3px;
   max-width: 48px;
   min-width: 48px;
   margin: 0 15px 0 0;
@@ -49,18 +49,14 @@ const AvatarPlaceholder = styled.div`
   background: rgba(0, 0, 0, 0.25);
 `;
 
-const Avatar = ({placeholder, speakerImages, speaker}) => {
+const Avatar = ({placeholder, speaker}) => {
   if (placeholder) return <AvatarPlaceholder />;
 
-  const image = speakerImages.edges.find(
-    ({node: {base}}) => base === speaker.avatar
-  );
-
-  if (!image) return <AvatarPlaceholder />;
+  if (!speaker.avatar) return <AvatarPlaceholder />;
 
   return (
     <AvatarImage
-      fixed={image.node.childImageSharp.fixed}
+      src={require(`../images/speakers/${speaker.avatar}`)}
       style={{width: 48, height: 48}}
     />
   );
@@ -73,9 +69,9 @@ const Speaker = ({screenName, name}) =>
     <NonLink>{name}</NonLink>
   );
 
-export const Talk = ({title, speaker, speakerImages}) => (
+export const Talk = ({title, speaker}) => (
   <Item>
-    <Avatar speakerImages={speakerImages} speaker={speaker} />
+    <Avatar speaker={speaker} />
 
     <div>
       <Name>
@@ -87,7 +83,7 @@ export const Talk = ({title, speaker, speakerImages}) => (
   </Item>
 );
 
-export const TipsAndTricksTalk = ({speakerImages}) => (
+export const TipsAndTricksTalk = () => (
   <Item>
     <Avatar placeholder={true} />
 

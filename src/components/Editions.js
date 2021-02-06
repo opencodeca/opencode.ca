@@ -7,10 +7,10 @@ const List = styled.ul`
   padding: 90px 0 0;
 `;
 
-const Editions = ({editions, speakerImages}) => (
+const Editions = ({editions}) => (
   <List>
     {editions.map(edition => (
-      <Edition key={edition.id} {...edition} speakerImages={speakerImages} />
+      <Edition key={edition.id} {...edition} />
     ))}
   </List>
 );

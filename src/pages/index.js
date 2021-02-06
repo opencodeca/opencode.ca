@@ -9,7 +9,6 @@ import Editions from '../components/Editions';
 
 export default ({
   data: {
-    speakerImages,
     site: {
       siteMetadata: {title, editions}
     }
@@ -18,26 +17,13 @@ export default ({
   <Layout>
     <Head lang="fr" title={title} />
     <Introduction />
-    <Editions editions={editions} speakerImages={speakerImages} />
+    <Editions editions={editions} />
     <Conclusion />
   </Layout>
 );
 
 export const pageQuery = graphql`
   query {
-    speakerImages: allFile(filter: {relativePath: {glob: "speakers/*"}}) {
-      edges {
-        node {
-          base
-          childImageSharp {
-            fixed(width: 96, height: 96, quality: 100) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    }
-
     site {
       siteMetadata {
         title
