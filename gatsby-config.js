@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: 'OpenCode (2011—2016)',
+    description:
+      'L’OpenCode est une série de rencontres mensuelles tenues entre 2011 et 2016 dans la ville de Québec où des développeurs se rencontraient autour de leur passion commune : le code.',
+    siteUrl: 'https://www.opencode.ca',
     editions: [
       {
         title: 'Édition bêta',
