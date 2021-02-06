@@ -32,8 +32,8 @@ const Layout = ({children, title, description, siteUrl}) => (
       <meta property="og:image:height" content="1024" />
 
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@mirego" />
-      <meta name="twitter:creator" content="@mirego" />
+      <meta name="twitter:site" content="@opencodeca" />
+      <meta name="twitter:creator" content="@opencodeca" />
 
       <link
         rel="stylesheet"
